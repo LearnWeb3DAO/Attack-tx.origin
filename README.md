@@ -12,7 +12,7 @@ Lets goo 🚀
 So for example, if User calls Contract A, which then calls contract B within the same transaction, `msg.sender` will be equal to `Contract A` when checked from inside `Contract B`. However, `tx.origin` will be the `User` regardless of where you check it from.
 
 
-## DOS Attack on a smart contract
+## tx.origin Attack on a smart contract
 
 ### What will happen?
 
