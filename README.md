@@ -21,7 +21,7 @@ There will be two smart contracts - `Good.sol` and `Attack.sol`. `Good.sol`. Ini
 
 ### Build
 
-Lets build an example where you can experience how the the attack happens.
+Lets build an example where you can experience how the attack happens.
 
 - To setup a Hardhat project, Open up a terminal and execute these commands
 
