@@ -12,11 +12,11 @@ Lets goo 🚀
 So for example, if User calls Contract A, which then calls contract B within the same transaction, `msg.sender` will be equal to `Contract A` when checked from inside `Contract B`. However, `tx.origin` will be the `User` regardless of where you check it from.
 
 
-## DOS Attack on a smart contract
+## tx.origin Attack on a smart contract
 
 ### What will happen?
 
-There will be two smart contracts - `Good.sol` and `Attack.sol`. `Good.sol`. Initially the owner of `Good.sol` will be a good user. Using the attack function `Attack.sol` will be able to change the owner of `Good.sol` to itself.
+There will be two smart contracts - `Good.sol` and `Attack.sol`. Initially the owner of `Good.sol` will be a good user. Using the attack function `Attack.sol` will be able to change the owner of `Good.sol` to itself.
 
 
 ### Build
