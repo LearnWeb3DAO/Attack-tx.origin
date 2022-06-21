@@ -1,6 +1,8 @@
 # Attack with tx.origin
 
-tx.origin is a global variable which returns the address that sent the transaction, we will learn how incorrect use of tx.origin could lead to security vulnerabilities in smart contracts
+`tx.origin` is a global variable which returns the address that created the original transaction. It is kind of similar to `msg.sender`, but with an important caveat. We will learn how incorrect use of tx.origin could lead to security vulnerabilities in smart contracts.
+
+<Quiz questionId="19f27642-5123-4ca0-8dc2-888901bc1a70" />
 
 Lets goo 🚀
 
@@ -11,6 +13,8 @@ Lets goo 🚀
 
 So for example, if User calls Contract A, which then calls contract B within the same transaction, `msg.sender` will be equal to `Contract A` when checked from inside `Contract B`. However, `tx.origin` will be the `User` regardless of where you check it from.
 
+<Quiz questionId="f1794e7c-a213-438e-a44e-4ba8af40fdae" />
+<Quiz questionId="8c7cdf4d-f222-4e4f-8f52-111883ebf624" />
 
 ## DOS Attack on a smart contract
 
@@ -140,6 +144,8 @@ When the tests pass, you will notice that the owner of `Good.sol` is now `Attack
 ## Real Life Example
 While this may seem obvious to most of you, as `tx.origin` isn't something you see being used at all, some developers do make this mistake. You can read about the [THORChain Hack #2 here](https://rekt.news/thorchain-rekt2/) where users lost millions in $RUNE due to an attacker being able to get approvals on $RUNE token by sending a fake token to user's wallets, and approving that token for sale on Uniswap would transfer $RUNE from the user's wallet to the attacker's wallet because THORChain used `tx.origin` for transfer checks instead of `msg.sender`.
 
+<Quiz questionId="88403387-338e-4a18-9c2f-9c73b4841c43" />
+
 ## Prevention
 
 - You should use `msg.sender` instead of `tx.origin` to not let this happen
@@ -159,6 +165,9 @@ Hope you liked this level ❤️, keep building.
 
 WAGMI 🚀
 
+<Quiz questionId="e9fac2b4-c5f3-4fc9-acd7-26ca40ea12b5" />
 
 ## References
 - [Solidity by example](https://solidity-by-example.org/)
+
+<SubmitQuiz />
